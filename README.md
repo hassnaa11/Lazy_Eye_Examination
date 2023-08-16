@@ -28,6 +28,6 @@ andstrengtheni t svisualprocessingabilities.</p>
 
 ## Contributors
 - [Ayat Tarek](https://github.com/Ayat-Tarek)
-- [Biatriss Boshra](https://github.com/)
-- [Shiamaa Kamel](https://github.com/)
+- [Biatriss Boshra](https://github.com/Biatris-003)
+- [Shiamaa Kamel](https://github.com/Shaimaakamel474)
 - [Hassnaa Hossam](https://github.com/hassnaa11)
