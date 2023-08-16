@@ -1,0 +1,62 @@
+int ldr0 = A0;
+int ldr1= A1;
+int ldr2= A2;
+int ldr3 =A3;
+int ldr4 =A4;
+int ldr5 = A5;
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int count=0;
+  int status;
+  int first = readLDR (ldr0);
+  Serial.print("A0: ");
+ Serial.println(first);
+  int second = readLDR(ldr1);
+  Serial.print("A1: ");
+ Serial.println(second);
+  int third=readLDR(ldr2);
+  Serial.print("A2: ");
+ Serial.println(third);
+  int fourth=readLDR(ldr3);
+  Serial.print("A3: ");
+Serial.println(fourth);
+  int fifth=readLDR(ldr4);
+  Serial.print("A4: ");
+ Serial.println(fifth);
+  int sixth=readLDR(ldr5);
+  Serial.print("A5: ");
+ Serial.println(sixth);
+
+  if(first>400) count++;
+  if(second>520) count++;
+  if(third>510) count++;
+  if(fourth>750) count++;
+  if(fifth>850) count++;
+  if(sixth>810) count++;
+
+  if(count==0) status=0 ;
+  if(count==1) status=1 ;
+  if(count==2) status=2 ;
+  if(count==3) status=3 ;
+  if(count==4) status=4 ;
+  if(count==5) status=5 ;
+  if(count==6) status=6 ;
+
+Serial.println("the status is: ");
+Serial.print(status);
+Serial.println("the count is: ");
+Serial.print(count);
+
+}
+int readLDR (int LDRNO ) {
+  int order;
+  for(int i = 0 ; i<5 ; i++){
+    order = analogRead(LDRNO);
+    delay(1500);
+  }
+  return order;
+}
